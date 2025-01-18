@@ -27,20 +27,77 @@ body {
   place-items: center;
 }
 
+@media screen and (max-width: 500px) {
+  .cont {
+    width: 70vw;
+    padding: 5vw;
+    border-radius: 2vw;
+  }
+
+  h1 {
+    font-size: 4.1vw;
+  }
+  .cont .password-area {
+    min-height: 25vh;
+    padding: 2vw;
+    gap: 5vw;
+  }
+  .password {
+    height: 5vh;
+    width: 100%;
+    font-size: 3.5vw;
+    font-weight: 600;
+    border: 2px solid var(--pri-col);
+    border-radius: 1.5vw;
+  }
+  .password-area button {
+    padding: 10px 20px;
+    font-size: 3vw;
+    font-weight: 600;
+    border-radius: 1.5vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .cont {
+    width: 50%;
+    padding: 2vw;
+    border-radius: 2vw;
+  }
+
+  h1 {
+    font-size: 3vw;
+  }
+  .cont .password-area {
+    min-height: 15vh;
+    padding: 2vw;
+    gap: 1vw;
+  }
+  .password {
+    height: 5vw;
+    font-size: 2vw;
+    border: 2px solid var(--pri-col);
+    border-radius: 0.5vw;
+    width: 80%;
+  }
+  .password-area button {
+    padding: 10px 20px;
+    font-size: 1vw;
+    font-weight: 500;
+    border-radius: 0.5vw;
+  }
+}
+
 .cont {
-  width: 50vw;
   height: auto;
   margin: auto;
-  padding: 2vw;
   background-color: var(--sec-col);
-  border-radius: 2vw;
   text-align: center;
 }
 
 .cont h1 {
   color: var(--pri-col);
   font-family: var(--pri-font);
-  font-size: 3vw;
   padding: 1vw;
 }
 
@@ -61,34 +118,22 @@ body {
 
 .cont .password-area {
   width: 100%;
-  min-height: 15vh;
-  padding: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1vw;
   font-family: var(--sec-font);
 }
 
 .password {
-  width: 80%;
-  height: 5vw;
-  border: 2px solid var(--pri-col);
-  border-radius: 0.5vw;
-  font-size: 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .password-area button {
-  padding: 10px 20px;
   border: none;
-  border-radius: 0.5vw;
   font-family: var(--sec-font);
-  font-size: 1vw;
-  font-weight: 500;
 }
 
 .password-area button:first-child {
