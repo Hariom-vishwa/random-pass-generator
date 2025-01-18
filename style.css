@@ -1,0 +1,102 @@
+/* Fonts Import */
+
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* Variables  */
+
+:root {
+  --pri-col: #005f5c;
+  --sec-col: #e0eeee;
+  --another-col: #b23813;
+  --pri-font: "Hammersmith One", serif;
+  --sec-font: "PT Sans", serif;
+}
+
+/* Styles  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.cont {
+  width: 50vw;
+  height: auto;
+  margin: auto;
+  padding: 2vw;
+  background-color: var(--sec-col);
+  border-radius: 2vw;
+  text-align: center;
+}
+
+.cont h1 {
+  color: var(--pri-col);
+  font-family: var(--pri-font);
+  font-size: 3vw;
+  padding: 1vw;
+}
+
+.cont h1 span {
+  border-bottom: 0.3vw solid var(--pri-col);
+  animation: span 3s ease-in-out infinite;
+}
+
+@keyframes span {
+  0%,
+  100% {
+    color: var(--pri-col);
+  }
+  50% {
+    color: var(--another-col);
+  }
+}
+
+.cont .password-area {
+  width: 100%;
+  min-height: 15vh;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  font-family: var(--sec-font);
+}
+
+.password {
+  width: 80%;
+  height: 5vw;
+  border: 2px solid var(--pri-col);
+  border-radius: 0.5vw;
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-area button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0.5vw;
+  font-family: var(--sec-font);
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+.password-area button:first-child {
+  background-color: var(--another-col);
+  color: var(--sec-col);
+}
+
+.password-area button:nth-child(2) {
+  background-color: var(--pri-col);
+  color: var(--sec-col);
+}
