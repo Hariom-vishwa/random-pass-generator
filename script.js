@@ -8,6 +8,7 @@ const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
 
   const wholeChars = upper + lower + nums + symbols;
 
+  // For password Generation 
 function generatePass() {
   let password = "";
   password += upper[Math.floor(Math.random() * upper.length)];
@@ -19,5 +20,13 @@ function generatePass() {
     password += wholeChars[Math.floor(Math.random() * wholeChars.length)]
   }
   passwordArea.innerHTML = password;
+}
 
+// For copying password
+
+function copyPass() {
+  navigator.clipboard
+    .writeText(passwordArea.value)
+    .then(() => alert("Password copied successfully!"))
+    .catch(() => alert("Failed to copy password!"));
 }
